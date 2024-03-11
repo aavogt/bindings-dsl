@@ -17,10 +17,6 @@ import Bindings.Gsl.VectorsAndMatrices.DataTypes
 #field deltal , Ptr <gsl_vector>
 #field deltar , Ptr <gsl_vector>
 #field B , Ptr <gsl_vector>
-#stoptype
-
-#starttype gsl_bspline_deriv_workspace
-#field k , CSize
 #field A , Ptr <gsl_matrix>
 #field dB , Ptr <gsl_matrix>
 #stoptype
@@ -35,8 +31,6 @@ import Bindings.Gsl.VectorsAndMatrices.DataTypes
 #ccall gsl_bspline_knots_uniform , CDouble -> CDouble -> Ptr <gsl_bspline_workspace> -> IO CInt
 #ccall gsl_bspline_eval , CDouble -> Ptr <gsl_vector> -> Ptr <gsl_bspline_workspace> -> IO CInt
 #ccall gsl_bspline_eval_nonzero , CDouble -> Ptr <gsl_vector> -> Ptr CSize -> Ptr CSize -> Ptr <gsl_bspline_workspace> -> IO CInt
-#ccall gsl_bspline_deriv_alloc , CSize -> IO (Ptr <gsl_bspline_deriv_workspace>)
-#ccall gsl_bspline_deriv_free , Ptr <gsl_bspline_deriv_workspace> -> IO ()
-#ccall gsl_bspline_deriv_eval , CDouble -> CSize -> Ptr <gsl_matrix> -> Ptr <gsl_bspline_workspace> -> Ptr <gsl_bspline_deriv_workspace> -> IO CInt
-#ccall gsl_bspline_deriv_eval_nonzero , CDouble -> CSize -> Ptr <gsl_matrix> -> Ptr CSize -> Ptr CSize -> Ptr <gsl_bspline_workspace> -> Ptr <gsl_bspline_deriv_workspace> -> IO CInt
+#ccall gsl_bspline_deriv_eval , CDouble -> CSize -> Ptr <gsl_matrix> -> Ptr <gsl_bspline_workspace> -> IO CInt
+#ccall gsl_bspline_deriv_eval_nonzero , CDouble -> CSize -> Ptr <gsl_matrix> -> Ptr CSize -> Ptr CSize -> Ptr <gsl_bspline_workspace> -> IO CInt
 

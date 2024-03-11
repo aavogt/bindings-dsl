@@ -85,7 +85,7 @@ import Bindings.Gsl.VectorsAndMatrices.DataTypes
 #field fdf , Ptr <gsl_multifit_function_fdf>
 #field x , Ptr <gsl_vector>
 #field f , Ptr <gsl_vector>
-#field J , Ptr <gsl_matrix>
+#field g , Ptr <gsl_matrix>
 #field dx , Ptr <gsl_vector>
 #field state , Ptr ()
 #stoptype

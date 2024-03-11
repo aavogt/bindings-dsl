@@ -58,9 +58,6 @@ import Bindings.Gsl.VectorsAndMatrices.DataTypes
     Ptr <gsl_vector> -> CDouble -> Ptr CSize -> Ptr <gsl_vector> -> \
     Ptr <gsl_matrix> -> Ptr CDouble -> \
     Ptr <gsl_multifit_linear_workspace> -> IO CInt
-#ccall gsl_multifit_linear_usvd , Ptr <gsl_matrix> ->  Ptr <gsl_vector> -> \
-    CDouble -> Ptr CSize -> Ptr <gsl_vector> -> Ptr <gsl_matrix> -> \
-    Ptr CDouble -> Ptr <gsl_multifit_linear_workspace> -> IO CInt
 #ccall gsl_multifit_wlinear_usvd , Ptr <gsl_matrix> ->  Ptr <gsl_vector> -> \
     Ptr <gsl_vector> -> CDouble -> Ptr CSize -> Ptr <gsl_vector> -> \
     Ptr <gsl_matrix> -> Ptr CDouble -> Ptr <gsl_multifit_linear_workspace> -> \
